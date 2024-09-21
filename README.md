@@ -33,6 +33,8 @@ The code does the following
 
 1. Open terminal, run `python linear.py` . This will generate both `linear_regression_model.pth` (save pytorch model in its own compatible model) and `linear_regression_model.onnx` ( universal compatible model )
 2. Not pushing the above models into repo. 
+3. part-1 of the script generates the linear regression model.
+4. [part-2](https://github.com/saibhaskerraju/onnx-public/blob/bb5fbba1b841b2dd7646185e7918536020f69be9/python-onnx/linear.py#L42) of the script generates `onnx` model
 
 #### [2. Use the `ONNX` model in dotnet](#2-use-the-onnx-model-in-dotnet)
 
@@ -60,7 +62,7 @@ To Open this project, select `react-onnx` in devcontainers. The solution will re
 
 Copy the `onnx` model you created in [python project](#1-python-linear-regression-model) into `src\assets\`. Since we are using `ONNX Runtime`, we need not have any `python` related dependencies installed to run the `onnx` model. 
 
-note the packages required.
+note the [packages](https://github.com/saibhaskerraju/onnx-public/blob/bb5fbba1b841b2dd7646185e7918536020f69be9/react-onnx/package.json#L13) required.
 ```
  "dependencies": {
     "onnxruntime-web": "^1.19.2",  < -- most and only important library
