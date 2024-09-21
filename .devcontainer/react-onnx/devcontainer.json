@@ -5,5 +5,15 @@
 	"dockerComposeFile": ["../../compose-dev-reactonnx.yml"],
 	"service": "react-onnx",
 	"shutdownAction": "stopCompose",
-	"workspaceFolder": "/workspace/react-onnx"
+	"workspaceFolder": "/workspace/react-onnx",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dsznajder.es7-react-js-snippets"
+			]
+		}
+	},
+	"features": {
+		"ghcr.io/devcontainers-community/npm-features/typescript:1": {}
+	}
 }

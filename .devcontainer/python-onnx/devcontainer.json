@@ -12,6 +12,9 @@
 				"ms-python.python"
 			]
 		}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {}
 	}
 
 }
