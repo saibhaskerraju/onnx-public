@@ -1,0 +1,8 @@
+services:
+  react-onnx:
+    build:
+      target: dev
+      context: react-onnx/.
+    volumes:
+      - .:/workspace:cached
+    command: sleep infinity

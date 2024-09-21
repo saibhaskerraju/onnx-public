@@ -1,0 +1,8 @@
+services:
+  dotnet-onnx:
+    build:
+      target: dev
+      context: dotnet-onnx/.
+    volumes:
+      - .:/workspace:cached
+    command: sleep infinity

@@ -1,0 +1,9 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
+{
+	"name": "react-onnx",
+	"dockerComposeFile": ["../../compose-dev-reactonnx.yml"],
+	"service": "react-onnx",
+	"shutdownAction": "stopCompose",
+	"workspaceFolder": "/workspace/react-onnx"
+}

@@ -1,0 +1,37 @@
+# Ignore build directories
+bin/
+obj/
+
+# Ignore user-specific files
+.vs/
+.vscode/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore node_modules if using any frontend build steps
+node_modules/
+
+# Ignore test project outputs
+TestResults/
+*.trx
+
+# Ignore personal settings and IDE configurations
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore git version control files
+.git/
+.gitignore
+
+# Ignore Docker-specific files
+docker-compose*
+Dockerfile
+
+# Ignore other unnecessary files
+**/Properties/launchSettings.json
+
+.env*
