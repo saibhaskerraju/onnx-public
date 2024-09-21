@@ -18,6 +18,7 @@ Select `Dev Containers: Rebuild and Reopen in Containers` if you are building fo
 #### [1. Python Linear Regression Model](#1-python-linear-regression-model)
 
 ![alt text](image.png)
+
 To Open this project, select `python-onnx` in devcontainers. The solution will re-open in devcontainer mode and it will install all required packages and VS Code extensions needed for this project automatically.
 
 The code does the following
