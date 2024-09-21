@@ -79,3 +79,6 @@ note the [packages](https://github.com/saibhaskerraju/onnx-public/blob/bb5fbba1b
 2. enter the value of `x` for equation ` y= mx + c` in the textbox give
 3. click on the button to generate the output value i.e. `y`.
 
+#### [4. Onnx Zoo](#4-onnx-zoo)
+
+Developers of ONNX have compiled us a list of pre-defined, state-of-the-art model ready for us. Here is the [list](https://github.com/onnx/models).
