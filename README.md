@@ -64,7 +64,7 @@ To Open this project, select `react-onnx` in devcontainers. The solution will re
 Copy the `onnx` model you created in [python project](#1-python-linear-regression-model) into `src\assets\`. Since we are using `ONNX Runtime`, we need not have any `python` related dependencies installed to run the `onnx` model. 
 
 note the [packages](https://github.com/saibhaskerraju/onnx-public/blob/bb5fbba1b841b2dd7646185e7918536020f69be9/react-onnx/package.json#L13) required.
-```
+```json
  "dependencies": {
     "onnxruntime-web": "^1.19.2",  < -- most and only important library
     "react": "^18.3.1",
@@ -72,6 +72,10 @@ note the [packages](https://github.com/saibhaskerraju/onnx-public/blob/bb5fbba1b
     "vite-plugin-static-copy": "^1.0.6" 
   },
 ```
+
+besides using the model created using python. I also used an exisitng model from   [huggingface](https://huggingface.co/bergum/xtremedistil-l6-h384-go-emotion).
+
+This model takes string as input and gives emotions and its score. All details about the model are mentioned in link.
 
 ##### Run locally
 

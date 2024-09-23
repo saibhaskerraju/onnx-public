@@ -9,7 +9,7 @@ import path from 'path'
 const wasmMiddleware = () => {
   return {
     name: 'wasm-middleware',
-    configureServer(server) {
+    configureServer(server: { middlewares: { use: (arg0: (req: any, res: any, next: any) => void) => void; }; }) {
       server.middlewares.use((req, res, next) => {
         if (req.url.endsWith('.wasm')) {
           const wasmPath = path.join('node_modules/onnxruntime-web/dist/', path.basename(req.url));
@@ -23,7 +23,7 @@ const wasmMiddleware = () => {
         catch (error) {
           console.error(`Failed to read .wasm file at ${wasmPath}:`, error);
           res.statusCode = 500;
-          res.end(`Failed to load .wasm file: ${error.message}`);
+          res.end(`Failed to load .wasm file: ${(error as Error).message}`);
         }
          
         }

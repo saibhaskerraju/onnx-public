@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import * as ort from 'onnxruntime-web';
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 const ONNXModelComponent = () => {
   const [session, setSession] = useState<ort.InferenceSession | null>(null);
@@ -47,10 +50,17 @@ const ONNXModelComponent = () => {
   return (
     <div>
       <h1>ONNX Model Inference</h1>
-      <input type="text" value={inputData} onChange={handleInputChange} placeholder="Enter input data" />
+      <h3>This is a Linear Regression ONNX model that takes a float/number as input</h3>
+      {/* <TextField id="outlined-basic" value={inputData} onChange={handleInputChange} label="Enter input data" variant="outlined" />
       <button onClick={handleButtonClick}>
         Run Inference
-      </button>
+      </button> */}
+      <Stack spacing={2} direction="row">
+        <TextField id="outlined-basic" value={inputData} onChange={handleInputChange} label="Enter input data" variant="outlined" />
+        <Button variant="contained" color="success" onClick={handleButtonClick}>
+          Success
+        </Button>
+      </Stack>
       {outputValue !== null && (
         <div>
           <h2>Output Value:</h2>
