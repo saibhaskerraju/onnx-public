@@ -2,7 +2,7 @@
 
 This is a public Repository to help begineers understand the fundamentals of ONNX. 
 
-![ONNX Logo](onnx.jpeg)
+![ONNX Logo](onnx.png)
 
 ##### We will be creating a `linear Regression` model in python. later, we will convert to `ONNX` format. To demonstrate the power of `onnx` , we will be consuming the same model in `dotnet` and later in `browser` as well.
 
