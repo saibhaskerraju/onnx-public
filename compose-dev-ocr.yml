@@ -1,0 +1,8 @@
+services:
+  python-ocr:
+    build:
+      target: dev
+      context: python-ocr/.
+    volumes:
+      - .:/workspace:cached
+    command: sleep infinity

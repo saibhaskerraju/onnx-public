@@ -40,3 +40,5 @@ react-onnx/.env
 react-onnx/.DS_Store
 react-onnx/.vscode
 react-onnx/dist
+
+python-onnx/myenv

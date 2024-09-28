@@ -1,0 +1,20 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-docker-compose
+{
+	"name": "python-ocr",
+	"dockerComposeFile": ["../../compose-dev-ocr.yml"],
+	"service": "python-ocr",
+	"shutdownAction": "stopCompose",
+	"workspaceFolder": "/workspace/python-ocr",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python"
+			]
+		}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {}
+	}
+
+}
