@@ -44,7 +44,6 @@ const TextInputArea: React.FC = () => {
     <div className="App">
       <h3>This is a Sentiment Analysis model that takes string as input and gives out sentiment based on score matching</h3>
         <Chart
-          width={'400px'}
           height={'300px'}
           chartType="BarChart"
           data={data}
