@@ -11,8 +11,15 @@ COPY . /app
 RUN apt-get update && apt-get install -y \
     build-essential \
     wget \
-    libgl1-mesa-glx \
-    libglib2.0-0 \
+    cmake \
+    git \
+    libgtk2.0-dev \
+    pkg-config \
+    libavcodec-dev \
+    libavformat-dev \
+    python3-dev \
+    python3-numpy \
+    libswscale-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

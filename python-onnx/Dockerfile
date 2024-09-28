@@ -4,16 +4,22 @@ FROM python:3.9-slim AS dev
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /workspace
+# Copy the requirements file into the container
+COPY requirements.txt /app/
+
+# Install virtualenv
+RUN pip install --no-cache-dir virtualenv
+
+# Create a virtual environment
+RUN virtualenv venv
+
+# Activate the virtual environment and install dependencies
+RUN . /app/venv/bin/activate && pip install --no-cache-dir -r /app/requirements.txt
+
+# Ensure the virtual environment's bin directory is in the PATH
+ENV PATH="/app/venv/bin:$PATH"
+
+# Copy the rest of the application code
 COPY . /app
-
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-# Install Python packages
-RUN pip install --no-cache-dir -r /app/requirements.txt
 
 CMD ["python","--version"]
